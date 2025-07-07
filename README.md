@@ -2,6 +2,27 @@
 The client code for my Steam-like game launcher.  
 This connects to a private API server (not open source), but the client itself is fully open source and free to use.
 
+
+## Table of Contents
+
+- [How to Run](#how-to-run)
+- [Dependencies](#dependencies)
+- [API Endpoint Map](#api-endpoint-map)
+  - [Auth](#auth)
+    - [`POST /auth/register`](#post-authregister)
+    - [`POST /auth/login`](#post-authlogin)
+  - [Games](#games)
+    - [`GET /games/`](#get-games)
+    - [`GET /gamesgame_id`](#get-gamesgame_id)
+  - [Marketplace](#marketplace)
+    - [`GET /marketplace/`](#get-marketplace)
+    - [`POST /marketplace/`](#post-marketplace)
+  - [Library](#library)
+    - [`GET /library/{user_id}`](#get-libraryuser_id)
+    - [`POST /library/`](#post-library)
+- [Notes](#notes)
+
+
 ## How to run
 You can either:
 
