@@ -58,8 +58,8 @@ These are the main API endpoints the client interacts with — useful for anyone
 
 ### Auth
 
-`POST /auth/register`
-Register a new user.
+#### POST /auth/register
+- Register a new user.
 
 **Request Body:**
 ```json
@@ -81,8 +81,8 @@ Register a new user.
 
 ---
 
-`POST /auth/login`
-Log in with your credentials.
+#### POST /auth/login
+- Log in with your credentials.
 
 **Request Body:**
 ```json
@@ -110,8 +110,8 @@ Log in with your credentials.
 
 ### Games
 
-`GET /games/`
-Get a list of all available games.
+#### GET /games/
+- Get a list of all available games.
 
 **Response:**
 ```json
@@ -125,8 +125,8 @@ Get a list of all available games.
 ]
 ```
 
-`GET /games/{game_id}`
-Get details for a specific game.
+#### GET /games/{game_id}
+- Get details for a specific game.
 
 **Response:**
 ```json
@@ -142,8 +142,8 @@ Get details for a specific game.
 
 ### Marketplace
 
-`GET /marketplace/`
-List all items available in the marketplace.
+#### GET /marketplace/
+- List all items available in the marketplace.
 
 **Response:**
 ```json
@@ -157,8 +157,8 @@ List all items available in the marketplace.
 ]
 ```
 
-`POST /marketplace/`
-Add an item to the marketplace.
+#### POST /marketplace/
+- Add an item to the marketplace.
 
 **Request Body:**
 ```json
@@ -177,8 +177,8 @@ Add an item to the marketplace.
 
 ### Library
 
-`GET /library/{user_id}`
-Get the list of games owned by a user.
+#### GET /library/{user_id}
+- Get the list of games owned by a user.
 
 **Response:**
 ```json
@@ -190,8 +190,8 @@ Get the list of games owned by a user.
 ]
 ```
 
-`POST /library/`
-Add a game to the user's library.
+#### POST /library/
+- Add a game to the user's library.
 
 **Request Body:**
 ```json
