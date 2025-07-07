@@ -13,7 +13,7 @@ This connects to a private API server (not open source), but the client itself i
     - [`POST /auth/login`](#post-authlogin)
   - [Games](#games)
     - [`GET /games/`](#get-games)
-    - [`GET /gamesgame_id`](#get-gamesgame_id)
+    - [`GET /games/{game_id}`](#get-gamesgame_id)
   - [Marketplace](#marketplace)
     - [`GET /marketplace/`](#get-marketplace)
     - [`POST /marketplace/`](#post-marketplace)
