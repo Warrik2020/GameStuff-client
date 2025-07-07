@@ -1,15 +1,22 @@
 # GameStuff-client
-The client code for my Steam-like game launcher. 
-This client connects to a private API server (not open source), but the client itself is fully open source and free to use.
+The client code for my Steam-like game launcher.  
+This connects to a private API server (not open source), but the client itself is fully open source and free to use.
 
 ## How to run
-You can download the .exe in Releases for a cleaner folder, or just download the source and run `main.py`.
+You can either:
+
+- Download the `.exe` from **Releases** (cleaner folder)
+- Or download the source and run:
+
+```bash
+python main.py
+```
 
 > Note:
 > I am using Python version 3.12.7, but you can test what version it works with because I don't know what else works with it tbh.
 
 ## Dependencies
-Probably should put this above but here:
+Probably should put this above but here you go:
 ```
 PyQt5
 requests
@@ -21,11 +28,16 @@ aiohttp
 
 These are the main API endpoints the client interacts with — useful for anyone curious.
 
+>Quick note:
+>If the API is slow, it’s probably just the server starting up.
+>
+>Not in my control right now — I’m broke and my router keeps disconnecting my main PC.
+
 ---
 
 ### Auth
 
-#### `POST /auth/register`
+`POST /auth/register`
 Register a new user.
 
 **Request Body:**
@@ -48,7 +60,7 @@ Register a new user.
 
 ---
 
-#### `POST /auth/login`
+`POST /auth/login`
 Log in with your credentials.
 
 **Request Body:**
@@ -77,7 +89,7 @@ Log in with your credentials.
 
 ### Games
 
-#### `GET /games/`
+`GET /games/`
 Get a list of all available games.
 
 **Response:**
@@ -92,7 +104,7 @@ Get a list of all available games.
 ]
 ```
 
-#### `GET /games/{game_id}`
+`GET /games/{game_id}`
 Get details for a specific game.
 
 **Response:**
@@ -109,7 +121,7 @@ Get details for a specific game.
 
 ### Marketplace
 
-#### `GET /marketplace/`
+`GET /marketplace/`
 List all items available in the marketplace.
 
 **Response:**
@@ -124,7 +136,7 @@ List all items available in the marketplace.
 ]
 ```
 
-#### `POST /marketplace/`
+`POST /marketplace/`
 Add an item to the marketplace.
 
 **Request Body:**
@@ -144,7 +156,7 @@ Add an item to the marketplace.
 
 ### Library
 
-#### `GET /library/{user_id}`
+`GET /library/{user_id}`
 Get the list of games owned by a user.
 
 **Response:**
@@ -157,7 +169,7 @@ Get the list of games owned by a user.
 ]
 ```
 
-#### `POST /library/`
+`POST /library/`
 Add a game to the user's library.
 
 **Request Body:**
@@ -177,9 +189,9 @@ Add a game to the user's library.
 
 > ## Notes
 >
-> All endpoints that modify data (such as adding to the library) require authentication.
+> All endpoints that modify data (such as adding to the library, and in the future, to the marketplace) require authentication.
 >
-> Since the API does not use tokens, include your username and password in the request body as with `/auth/login`.
+> Since there's no token system,  include your username/password with each request - just like `/auth/login`.
 >
 > There is currently no rate limiting, but don’t abuse the API :)
 ---
