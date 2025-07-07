@@ -46,4 +46,4 @@ assignees: ''
 
 ---
 
-**Note**: If you believe this issue is related to the private API server, please **do not report it here**. Instead, email your findings to `warrickdev.9875@gmail.com` (replace with your actual email address).
+**Note**: If you believe this issue is related to the private API server, please **do not report it here**. Instead, email your findings to `warrickdev.9875@gmail.com`!
