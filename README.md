@@ -212,6 +212,8 @@ These are the main API endpoints the client interacts with — useful for anyone
 >
 > All endpoints that modify data (such as adding to the library, and in the future, to the marketplace) require authentication.
 >
+> If anything is wrong in the API documentation, feel free to make a issue stating the inaccurate part, and also provide something more accurate if you feel nice :D
+>
 > Since there's no token system,  include your username/password with each request - just like `/auth/login`.
 >
 > There is currently no rate limiting, but don’t abuse the API :)
