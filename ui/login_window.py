@@ -5,7 +5,7 @@ from core.session import save_session, load_session
 from ui.main_window import MainWindow
 import asyncio
 import aiohttp
-from qasync import QEventLoop
+from qasync import QEventLoop, asyncSlot
 
 MAX_RETRIES = 20
 RETRY_DELAY = 3
@@ -31,11 +31,11 @@ class LoginWindow(QMainWindow):
         layout.addWidget(self.password_input)
 
         self.login_button = QPushButton("Login", self)
-        self.login_button.clicked.connect(lambda: asyncio.create_task(self.on_login))
+        self.login_button.clicked.connect(lambda: asyncio.get_event_loop().create_task(self.on_login()))
         layout.addWidget(self.login_button)
 
         self.register_button = QPushButton("Register", self)
-        self.register_button.clicked.connect(lambda: asyncio.create_task(self.on_register))
+        self.register_button.clicked.connect(lambda: asyncio.get_event_loop().create_task(self.on_register()))
         layout.addWidget(self.register_button)
 
         container = QWidget()
@@ -48,7 +48,7 @@ class LoginWindow(QMainWindow):
         if session:
             self.username_input.setText(session["username"])
             self.password_input.setText(session["password"])
-            QTimer.singleShot(100, lambda: asyncio.create_task(self.on_login(auto=True)))
+            QTimer.singleShot(100, lambda: asyncio.get_event_loop().create_task(self.on_login(auto=True)))
 
     async def on_login(self, auto=False):
         username = self.username_input.text()
@@ -56,7 +56,7 @@ class LoginWindow(QMainWindow):
 
         for attempt in range(MAX_RETRIES):
             try:
-                response = await login(username, password)
+                response = login(username, password)
                 if response and response.get("msg") == "Login successful":
                     if not auto:
                         save_session(username, password)
