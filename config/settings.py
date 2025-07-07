@@ -3,7 +3,7 @@ import json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-SERVER_URL = "https://l5glkt52-8000.usw3.devtunnels.ms"
+SERVER_URL = "https://gamestuff-server.onrender.com"
 DOWNLOADS_DIR = os.path.join(BASE_DIR, "..", "games")
 MODS_DIR = os.path.join(BASE_DIR, "..", "mods")
 SETTINGS_PATH = 'settings.json'

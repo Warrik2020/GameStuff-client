@@ -4,5 +4,5 @@ class WorkshopTab(QWidget):
     def __init__(self):
         super().__init__()
         layout = QVBoxLayout()
-        layout.addWidget(QLabel("Workshop - Mods & Community Content (WIP)"))
+        layout.addWidget(QLabel("Workshop - Mods & Community Content (Not Finished)"))
         self.setLayout(layout)
