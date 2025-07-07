@@ -56,7 +56,7 @@ class LoginWindow(QMainWindow):
 
         for attempt in range(MAX_RETRIES):
             try:
-                response = login(username, password)
+                response = await login(username, password)
                 if response and response.get("msg") == "Login successful":
                     if not auto:
                         save_session(username, password)
