@@ -175,8 +175,8 @@ Add a game to the user's library.
 
 ---
 
-## Notes
-
+> ## Notes
+>
 > All endpoints that modify data (such as adding to the library) require authentication.
 >
 > Since the API does not use tokens, include your username and password in the request body as with `/auth/login`.
