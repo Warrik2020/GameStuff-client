@@ -52,7 +52,7 @@ These are the main API endpoints the client interacts with — useful for anyone
 >Quick note:
 >If the API is slow, it’s probably just the server starting up.
 >
->Not in my control right now — I’m broke and my router keeps disconnecting my main PC.
+>Not in my control right now — I’m broke and my router keeps disconnecting my main PC so I can't self host.
 
 ---
 
