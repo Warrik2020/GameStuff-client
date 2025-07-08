@@ -131,7 +131,7 @@ These are the main API endpoints the client interacts with — useful for anyone
       "cpu": "Sigma Core",
       "gpu": "Integrated"
     },
-    "id": game_id
+    "id": 0
   }
 ]
 ```
@@ -142,7 +142,7 @@ These are the main API endpoints the client interacts with — useful for anyone
 **Response:**
 ```json
 {
-  "id": game_id,
+  "id": 0,
   "title": "game name",
   "version": "1.0.0",
   "description": "Just a game...",
