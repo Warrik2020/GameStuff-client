@@ -51,7 +51,7 @@ class SettingsTab(QWidget):
         layout.addWidget(self.dark_mode_checkbox)
 
         # === Save Button ===
-        self.save_button = QPushButton("💾 Save Settings")
+        self.save_button = QPushButton("Save Settings")
         self.save_button.setFixedHeight(40)
         self.save_button.setStyleSheet("""
             QPushButton {
