@@ -117,10 +117,21 @@ These are the main API endpoints the client interacts with — useful for anyone
 ```json
 [
   {
-    "id": 1,
-    "title": "Game Title",
-    "description": "Game description...",
-    "price": 9.99
+    "title": "game name",
+    "version": "1.0.0",
+    "description": "Game description",
+    "developer": "Dev Name",
+    "release_date": "1",
+    "icon": "icon.png",
+    "screenshot": "screenshot1.png",
+    "requirements": {
+      "os": "Windows 69",
+      "ram": "1 GB",
+      "storage": "420 MB",
+      "cpu": "Sigma Core",
+      "gpu": "Integrated"
+    },
+    "id": game_id
   }
 ]
 ```
@@ -131,10 +142,21 @@ These are the main API endpoints the client interacts with — useful for anyone
 **Response:**
 ```json
 {
-  "id": 1,
-  "title": "Game Title",
-  "description": "Game description...",
-  "price": 9.99
+  "id": game_id,
+  "title": "game name",
+  "version": "1.0.0",
+  "description": "Just a game...",
+  "developer": "Dev Name",
+  "release_date": "1",
+  "icon": "icon.png",
+  "screenshot": "screenshot1.png",
+  "requirements": {
+    "os": "Windows 69",
+    "ram": "1 GB",
+    "storage": "420 MB",
+    "cpu": "Sigma Core",
+    "gpu": "Integrated"
+  }
 }
 ```
 
