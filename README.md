@@ -117,21 +117,12 @@ These are the main API endpoints the client interacts with — useful for anyone
 ```json
 [
   {
-    "title": "game name",
-    "version": "1.0.0",
-    "description": "Game description",
-    "developer": "Dev Name",
-    "release_date": "1",
-    "icon": "icon.png",
-    "screenshot": "screenshot1.png",
-    "requirements": {
-      "os": "Windows 69",
-      "ram": "1 GB",
-      "storage": "420 MB",
-      "cpu": "Sigma Core",
-      "gpu": "Integrated"
-    },
-    "id": 0
+    "price": 0,
+    "description": "Just a game...",
+    "title": "game",
+    "id": 1,
+    "download_url": null,
+    "metadata_path": "server_storage/games/game/metadata.json"
   }
 ]
 ```
@@ -164,62 +155,57 @@ These are the main API endpoints the client interacts with — useful for anyone
 
 ### Marketplace
 
-#### GET /marketplace/
+#### GET /marketplace/games
 - List all items available in the marketplace.
 
 **Response:**
 ```json
 [
   {
-    "id": 1,
-    "game_id": 1,
-    "seller": "username",
-    "price": 7.99
+    "id": "game",
+    "title": "game",
+    "version": "1.0.0",
+    "description": "Just a game...",
+    "developer": "Warrick",
+    "release_date": "1",
+    "icon": "icon.png",
+    "screenshot": "screenshot1.png",
+    "requirements": {
+      "os": "Windows 69",
+      "ram": "420 GB",
+      "storage": "150 MB",
+      "cpu": "Sigma Core",
+      "gpu": "Any"
+    }
   }
 ]
-```
-
-#### POST /marketplace/
-- Add an item to the marketplace.
-
-**Request Body:**
-```json
-{
-  "game_id": 1,
-  "price": 7.99
-}
-```
-
-**Response:**
-```json
-{ "msg": "Item added to marketplace" }
 ```
 
 ---
 
 ### Library
 
-#### GET /library/{user_id}
+#### GET /library/{user_name}
 - Get the list of games owned by a user.
 
 **Response:**
 ```json
-[
-  {
-    "game_id": 1,
-    "title": "Game Title"
-  }
-]
+{
+  "library": [
+    "game"
+  ]
+}
 ```
 
-#### POST /library/
+#### POST /library/add
 - Add a game to the user's library.
 
 **Request Body:**
 ```json
 {
-  "user_id": 1,
-  "game_id": 1
+  "username": "username",
+  "password": "password"
+  "game_name": "game name"
 }
 ```
 
